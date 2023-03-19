@@ -1,0 +1,21 @@
+<annotation>
+    <folder>VOC2007</folder>
+    <filename>66.jpg</filename>
+    <size>
+        <width>720</width>
+        <height>406</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>safetyhat</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>65</xmin>
+            <ymin>96</ymin>
+            <xmax>383</xmax>
+            <ymax>369</ymax>
+        </bndbox>
+    </object>
+</annotation>
