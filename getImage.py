@@ -33,7 +33,7 @@ for num, line in enumerate(lines):
     if len(line.strip()) == 0: continue
     if line.startswith("ans"):
         i += 1
-        temp3 = str(i)+'.jpg'
+        temp3 = str(i) + '.jpg'
         print(line)
     else:
         # print(num)
@@ -82,15 +82,15 @@ for img in image_names:
         cnt = len(img_each_label) // 4
         for i in range(0, cnt):
             xml_file.write('    <object>\n')
-            xml_file.write('        <name>' + str("safetyhat") + '</name>\n')
+            xml_file.write('        <name>' + str("person") + '</name>\n')  # 必须更改为对应分类的名称
             xml_file.write('        <pose>Unspecified</pose>\n')
             xml_file.write('        <truncated>0</truncated>\n')
             xml_file.write('        <difficult>0</difficult>\n')
             xml_file.write('        <bndbox>\n')
             xml_file.write('            <xmin>' + str(spt[i * 4 + 0]) + '</xmin>\n')
             xml_file.write('            <ymin>' + str(spt[i * 4 + 1]) + '</ymin>\n')
-            xml_file.write('            <xmax>' + str(int(spt[i * 4 + 2])+int(spt[i * 4 + 0])) + '</xmax>\n')
-            xml_file.write('            <ymax>' + str(int(spt[i * 4 + 3])+int(spt[i * 4 + 1])) + '</ymax>\n')
+            xml_file.write('            <xmax>' + str(int(spt[i * 4 + 2]) + int(spt[i * 4 + 0])) + '</xmax>\n')
+            xml_file.write('            <ymax>' + str(int(spt[i * 4 + 3]) + int(spt[i * 4 + 1])) + '</ymax>\n')
             xml_file.write('        </bndbox>\n')
             xml_file.write('    </object>\n')
 
